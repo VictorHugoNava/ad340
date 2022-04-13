@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hello World</string>
+    <string name="hello_world">hello_world</string>
+    <string name="nameAndDate">Navarro, Victor - 4/12/2022</string>
+</resources>
