@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">Hello World</string>
     <string name="hello_world">hello_world</string>
-    <string name="nameAndDate">Navarro, Victor - 4/12/2022</string>
+    <string name="nameAndDate">Navarro, Victor - 4/19/2022</string>
+    <string name="inputNameField">Please input your name</string>
+    <string name="inputEmail">Please input your email address</string>
+    <string name="dobSelection">Select your Date of Birth</string>
+    <string name="enterUsername">Please create a unername</string>
+    <string name="submitButton">Submit</string>
+    <string name="email_address_error">Wrong email address format</string>
+    <string name="forgot_data_error">You forgot to input some data on the form</string>
+    <string name="eighteen_error">You are under eighteen years old.</string>
+    <string name="date">date</string>
+    <string name="back">Back</string>
+    <string name="slash">/</string>
+    <string name="dob">%1$d/%2$d/%3$d</string>
+    <string name="Thanks">Thanks for signing up \n</string>
 </resources>
