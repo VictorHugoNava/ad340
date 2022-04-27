@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     private int dobYear = 0;
     private int dobMonth = 0;
     private int dobDay = 0;
+    private EditText occupation;
+    private EditText description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +42,16 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         emailAddressField = findViewById(R.id.emailAddress);
         userNameField = findViewById(R.id.userName);
         dobTextView = findViewById(R.id.selectedDob);
+        occupation = findViewById(R.id.occupation);
+        description = findViewById(R.id.description);
     }
 
     public void onSubmit(View view){
         String name = nameField.getText().toString();
         String emailAddress = emailAddressField.getText().toString();
         String username = userNameField.getText().toString();
+        String Occupation = occupation.getText().toString();
+        String Description = description.getText().toString();
 
         if(name.equals("") || emailAddress.equals("") || username.equals("") || dobYear == 0 || dobMonth == 0 || dobDay == 0){
             Toast.makeText(getApplicationContext(), getString(R.string.forgot_data_error), Toast.LENGTH_LONG).show();
@@ -67,6 +73,9 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
         Intent intent = new Intent(getApplicationContext(), WelcomeScreen.class);
         intent.putExtra(Constants.USERNAME_KEY, username);
+        intent.putExtra(Constants.AGE_KEY, years);
+        intent.putExtra(Constants.DESCRIPTION_KEY, description.getText().toString());
+        intent.putExtra(Constants.OCCUPATION_KEY, occupation.getText().toString());
         startActivity(intent);
 
     }
@@ -96,6 +105,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         nameField.setText("");
         userNameField.setText("");
         emailAddressField.setText("");
+        dobTextView.setText("");
+        description.setText("");
         dobTextView.setText("");
         dobYear = 0;
         dobDay = 0;

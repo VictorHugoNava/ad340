@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="fortyLetter">40sp</dimen>
+    <dimen name="tenMarginTop">10dp</dimen>
+    <dimen name="twentyLetter">20sp</dimen>
+    <dimen name="twentyMarginTop">20dp</dimen>
+    <dimen name="tenMarginLeft">10dp</dimen>
+    <dimen name="tenMarginRight">10dp</dimen>
+    <dimen name="twentySpacing">20sp</dimen>
+    <dimen name="fifteenLetter">12sp</dimen>
+    <dimen name="marginRight">10dp</dimen>
+    <dimen name="marginTop">10dp</dimen>
+    <dimen name="twohundred">200dp</dimen>
+</resources>
