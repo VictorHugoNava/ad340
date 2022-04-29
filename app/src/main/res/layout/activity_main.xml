@@ -21,20 +21,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/inputEmail"
-        app:layout_constraintBottom_toTopOf="@+id/userName"
+        app:layout_constraintBottom_toTopOf="@id/userName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameField" />
+        app:layout_constraintTop_toBottomOf="@id/nameField" />
 
     <EditText
         android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enterUsername"
-        app:layout_constraintBottom_toTopOf="@+id/nameAndDate"
+        app:layout_constraintBottom_toTopOf="@id/nameAndDate"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+        app:layout_constraintTop_toBottomOf="@id/emailAddress" />
 
     <EditText
         android:id="@+id/occupation"
@@ -62,10 +62,10 @@
         android:layout_height="wrap_content"
         android:text="@string/dobSelection"
         android:onClick="onDobClick"
-        app:layout_constraintBottom_toTopOf="@+id/selectedDob"
+        app:layout_constraintBottom_toTopOf="@id/selectedDob"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintTop_toBottomOf="@id/description" />
 
     <EditText
         android:id="@+id/selectedDob"
@@ -74,7 +74,7 @@
         app:layout_constraintBottom_toTopOf="@id/submitButton"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dobButton" />
+        app:layout_constraintTop_toBottomOf="@id/dobButton" />
 
     <Button
         android:id="@+id/submitButton"
@@ -82,10 +82,10 @@
         android:layout_height="wrap_content"
         android:text="@string/submitButton"
         android:onClick="onSubmit"
-        app:layout_constraintBottom_toTopOf="@+id/nameAndDate"
+        app:layout_constraintBottom_toTopOf="@id/nameAndDate"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectedDob" />
+        app:layout_constraintTop_toBottomOf="@id/selectedDob" />
 
     <TextView
         android:id="@+id/nameAndDate"
@@ -95,6 +95,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submitButton" />
+        app:layout_constraintTop_toBottomOf="@id/submitButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

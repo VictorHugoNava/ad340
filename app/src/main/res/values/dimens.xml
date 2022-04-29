@@ -12,4 +12,5 @@
     <dimen name="marginRight">10dp</dimen>
     <dimen name="marginTop">10dp</dimen>
     <dimen name="twohundred">200dp</dimen>
+    <dimen name="twentyFive">25dp</dimen>
 </resources>

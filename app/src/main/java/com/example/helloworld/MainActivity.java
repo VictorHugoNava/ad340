@@ -20,6 +20,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.jar.Attributes;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
 
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         String Occupation = occupation.getText().toString();
         String Description = description.getText().toString();
 
-        if(name.equals("") || emailAddress.equals("") || username.equals("") || dobYear == 0 || dobMonth == 0 || dobDay == 0){
+        if(name.equals("") || emailAddress.equals("") || username.equals("") || Occupation.equals("") || Description.equals("") ||
+                dobYear == 0 || dobMonth == 0 || dobDay == 0){
             Toast.makeText(getApplicationContext(), getString(R.string.forgot_data_error), Toast.LENGTH_LONG).show();
             return;
         }
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         Intent intent = new Intent(getApplicationContext(), WelcomeScreen.class);
         intent.putExtra(Constants.USERNAME_KEY, username);
         intent.putExtra(Constants.AGE_KEY, years);
+        intent.putExtra(Constants.NAME_KEY, name);
         intent.putExtra(Constants.DESCRIPTION_KEY, description.getText().toString());
         intent.putExtra(Constants.OCCUPATION_KEY, occupation.getText().toString());
         startActivity(intent);
@@ -107,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         emailAddressField.setText("");
         dobTextView.setText("");
         description.setText("");
+        occupation.setText("");
         dobTextView.setText("");
         dobYear = 0;
         dobDay = 0;

@@ -28,8 +28,8 @@ public class WelcomeScreen extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
 
         if(bundle != null){
-            if(bundle.containsKey(Constants.USERNAME_KEY)){
-                name.setText(getString(R.string.Thanks) + bundle.getString(Constants.USERNAME_KEY));
+            if(bundle.containsKey(Constants.NAME_KEY)){
+                name.setText(bundle.getString(Constants.NAME_KEY));
             }
             if(bundle.containsKey(Constants.AGE_KEY)){
                 age.setText("" + bundle.getInt(Constants.AGE_KEY));
