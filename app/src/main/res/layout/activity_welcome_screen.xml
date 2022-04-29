@@ -21,7 +21,6 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="@dimen/twenty"
         android:layout_marginTop="@dimen/twenty"
-        android:text="Victor"
         android:textSize="@dimen/fortyLetter"
         android:textStyle="bold" />
 
@@ -33,7 +32,6 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="@dimen/marginRight"
-        android:text="Student"
         android:textSize="@dimen/twentyLetter" />
 
     <TextView
@@ -45,7 +43,6 @@
         android:layout_marginRight="@dimen/tenMarginRight"
         android:lineSpacingExtra="@dimen/twentySpacing"
         android:textSize="@dimen/fifteenLetter"
-        android:text="Mexico kid"
         android:layout_below="@id/occupation"  />
 
     <TextView
@@ -55,7 +52,6 @@
         android:layout_below="@id/name"
         android:layout_marginTop="@dimen/marginRight"
         android:layout_toEndOf="@id/occupation"
-        android:text="22"
         android:textSize="@dimen/twentyLetter" />
 
     <Button
