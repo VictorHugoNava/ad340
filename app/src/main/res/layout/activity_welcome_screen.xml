@@ -1,66 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".WelcomeScreen">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/profilePic"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/twohundred"
-        android:paddingTop="@dimen/twentyFive"
-        android:src="@drawable/ic_action_name" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/name"
+        <!-- The ActionBar displayed at the top -->
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- The main content view where fragments are loaded -->
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navDrawer"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/profilePic"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="@dimen/twenty"
-        android:layout_marginTop="@dimen/twenty"
-        android:textSize="@dimen/fortyLetter"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/occupation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="@dimen/marginRight"
-        android:textSize="@dimen/twentyLetter" />
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/twentyMarginTop"
-        android:layout_marginLeft="@dimen/tenMarginLeft"
-        android:layout_marginRight="@dimen/tenMarginRight"
-        android:lineSpacingExtra="@dimen/twentySpacing"
-        android:textSize="@dimen/fifteenLetter"
-        android:layout_below="@id/occupation"  />
-
-    <TextView
-        android:id="@+id/age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name"
-        android:layout_marginTop="@dimen/marginRight"
-        android:layout_toEndOf="@id/occupation"
-        android:textSize="@dimen/twentyLetter" />
-
-    <Button
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onBackClick"
-        android:text="@string/back"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        app:menu="@menu/drawer_view" />
+</androidx.drawerlayout.widget.DrawerLayout>

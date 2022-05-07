@@ -13,4 +13,8 @@
     <dimen name="marginTop">10dp</dimen>
     <dimen name="twohundred">200dp</dimen>
     <dimen name="twentyFive">25dp</dimen>
+    <dimen name="threehundred">300sp</dimen>
+    <dimen name="thirtysp">30sp</dimen>
+    <dimen name="twentyfivesp">25sp</dimen>
+    <dimen name="five">5sp</dimen>
 </resources>

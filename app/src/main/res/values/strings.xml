@@ -17,4 +17,11 @@
     <string name="Thanks">Thanks for signing up \n</string>
     <string name="description">Description</string>
     <string name="occupation">Occupation</string>
+    <string name="profile">profile</string>
+    <string name="matches">matches</string>
+    <string name="settings">settings</string>
+    <string name="matchesGoHere">Matches</string>
+    <string name="settingsGoHere">Settings</string>
+    <string name="drawer_open">"Open Navigation "</string>
+    <string name="drawer_close">Close Navigation</string>
 </resources>

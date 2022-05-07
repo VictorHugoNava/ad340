@@ -4,6 +4,7 @@ package com.example.helloworld;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
@@ -75,5 +76,106 @@ public class MainActivityTest {
         onView(withId(R.id.occupation)).check(matches(withText("")));
         onView(withId(R.id.description)).check(matches(withText("")));
     }
+
+    @Test
+    public void checkingValidEmail() {
+        onView(withId(R.id.nameField)).perform(replaceText("Victor"));
+        //onView(withId(R.id.emailAddress)).perform(replaceText("victor@gmail.com"));
+        onView(withId(R.id.userName)).perform(replaceText("victornava"));
+        onView(withId(R.id.occupation)).perform(replaceText("Student"));
+        onView(withId(R.id.description)).perform(replaceText("I am a student"));
+
+        onView(withId(R.id.dobButton)).perform(click());
+
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2001, 4, 10));
+
+        onView(withId(android.R.id.button1)).perform(click());
+
+        onView(withId(R.id.submitButton)).perform(click());
+
+        onView(withText("victor@gmail.com")).check(doesNotExist());
+    }
+
+    @Test
+    public void checkingName() {
+        //onView(withId(R.id.nameField)).perform(replaceText("Victor"));
+        onView(withId(R.id.emailAddress)).perform(replaceText("victor@gmail.com"));
+        onView(withId(R.id.userName)).perform(replaceText("victornava"));
+        onView(withId(R.id.occupation)).perform(replaceText("Student"));
+        onView(withId(R.id.description)).perform(replaceText("I am a student"));
+
+        onView(withId(R.id.dobButton)).perform(click());
+
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2001, 4, 10));
+
+        onView(withId(android.R.id.button1)).perform(click());
+
+        onView(withId(R.id.submitButton)).perform(click());
+
+        onView(withText("Victor")).check(doesNotExist());
+    }
+
+    @Test
+    public void checkingUserName() {
+        onView(withId(R.id.nameField)).perform(replaceText("Victor"));
+        onView(withId(R.id.emailAddress)).perform(replaceText("victor@gmail.com"));
+        //onView(withId(R.id.userName)).perform(replaceText("victornava"));
+        onView(withId(R.id.occupation)).perform(replaceText("Student"));
+        onView(withId(R.id.description)).perform(replaceText("I am a student"));
+
+        onView(withId(R.id.dobButton)).perform(click());
+
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2001, 4, 10));
+
+        onView(withId(android.R.id.button1)).perform(click());
+
+        onView(withId(R.id.submitButton)).perform(click());
+
+        onView(withText("victornava")).check(doesNotExist());
+    }
+
+    @Test
+    public void checkingDescription() {
+        onView(withId(R.id.nameField)).perform(replaceText("Victor"));
+        onView(withId(R.id.emailAddress)).perform(replaceText("victor@gmail.com"));
+        onView(withId(R.id.userName)).perform(replaceText("victornava"));
+        onView(withId(R.id.occupation)).perform(replaceText("Student"));
+        //onView(withId(R.id.description)).perform(replaceText("I am a student"));
+
+        onView(withId(R.id.dobButton)).perform(click());
+
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2001, 4, 10));
+
+        onView(withId(android.R.id.button1)).perform(click());
+
+        onView(withId(R.id.submitButton)).perform(click());
+
+        onView(withText("I am a student")).check(doesNotExist());
+    }
+
+    @Test
+    public void checkingOccupation() {
+        onView(withId(R.id.nameField)).perform(replaceText("Victor"));
+        onView(withId(R.id.emailAddress)).perform(replaceText("victor@gmail.com"));
+        onView(withId(R.id.userName)).perform(replaceText("victornava"));
+        //onView(withId(R.id.occupation)).perform(replaceText("Student"));
+        onView(withId(R.id.description)).perform(replaceText("I am a student"));
+
+        onView(withId(R.id.dobButton)).perform(click());
+
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2001, 4, 10));
+
+        onView(withId(android.R.id.button1)).perform(click());
+
+        onView(withId(R.id.submitButton)).perform(click());
+
+        onView(withText("Student")).check(doesNotExist());
+    }
+
 }
 
