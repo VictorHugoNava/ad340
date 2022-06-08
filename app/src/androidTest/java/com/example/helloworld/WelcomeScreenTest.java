@@ -7,6 +7,10 @@ import static androidx.test.espresso.matcher.ViewMatchers.hasDescendant;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.espresso.matcher.ViewMatchers.isRoot;
+
+import static com.example.helloworld.RecyclerViewMatcher.withRecyclerView;
+
 
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
@@ -25,13 +29,17 @@ public class WelcomeScreenTest {
     public void succesfulNavigationToSettings(){
         onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
-        onView(withId(R.id.settingsTextView)).check(matches(withText("Settings")));
     }
 
     @Test
     public void succesfulNavigationToMatches(){
         onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
-        onView(withId(R.id.matchesTextView)).check(matches(withText("Matches")));
+
+
+        onView(isRoot()).perform(HelpersViewMatcher.waitId(R.id.matchesTextView, 5000));
+
+        onView(withRecyclerView(R.id.matchesTextView).atPosition(0))
+                .check(matches(hasDescendant(withText("Cool Guy Mike"))));
     }
 }

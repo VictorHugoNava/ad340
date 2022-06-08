@@ -177,5 +177,25 @@ public class MainActivityTest {
         onView(withText("Student")).check(doesNotExist());
     }
 
+    @Test
+    public void cannotGoThroughFormWithYoungDob() {
+        onView(withId(R.id.nameField)).perform(replaceText("Victor"));
+        onView(withId(R.id.emailAddress)).perform(replaceText("victor@gmail.com"));
+        onView(withId(R.id.userName)).perform(replaceText("victorhugo"));
+        onView(withId(R.id.description)).perform(replaceText("I am a student"));
+        onView(withId(R.id.occupation)).perform(replaceText("Student"));
+
+        onView(withId(R.id.dobButton)).perform(click());
+
+        onView(withClassName(Matchers.equalTo(DatePicker.class.getName())))
+                .perform(PickerActions.setDate(2021, 2 + 1, 5));
+
+        onView(withId(android.R.id.button1)).perform(click());
+
+        onView(withId(R.id.submitButton)).perform(click());
+
+        onView(withText("3/5/2000")).check(doesNotExist());
+    }
+
 }
 
