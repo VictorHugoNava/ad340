@@ -46,7 +46,6 @@ public class MatchesDataModel {
     }
 
     public void clear() {
-        // Clear all the listeners onPause
         listeners.forEach(ListenerRegistration::remove);
     }
 }
