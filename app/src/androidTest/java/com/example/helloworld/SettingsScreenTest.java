@@ -28,7 +28,7 @@ public class SettingsScreenTest {
 
     @Test
     public void canSaveSettings() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.select_matches_time_button)).perform(click());
@@ -44,9 +44,9 @@ public class SettingsScreenTest {
 
         onView(withId(R.id.saveButton)).perform(click());
 
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
@@ -54,7 +54,7 @@ public class SettingsScreenTest {
 
     @Test
     public void canSaveWithSheHer() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.select_matches_time_button)).perform(click());
@@ -70,9 +70,9 @@ public class SettingsScreenTest {
 
         onView(withId(R.id.saveButton)).perform(click());
 
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
@@ -80,7 +80,7 @@ public class SettingsScreenTest {
 
     @Test
     public void canSaveWithTheyThem() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.select_matches_time_button)).perform(click());
@@ -96,9 +96,9 @@ public class SettingsScreenTest {
 
         onView(withId(R.id.saveButton)).perform(click());
 
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
@@ -106,7 +106,7 @@ public class SettingsScreenTest {
 
     @Test
     public void canSaveWithNoAnswer() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.select_matches_time_button)).perform(click());
@@ -122,9 +122,9 @@ public class SettingsScreenTest {
 
         onView(withId(R.id.saveButton)).perform(click());
 
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
@@ -132,7 +132,7 @@ public class SettingsScreenTest {
 
     @Test
     public void canSaveWithPublic() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.select_matches_time_button)).perform(click());
@@ -150,9 +150,9 @@ public class SettingsScreenTest {
 
         onView(withId(R.id.saveButton)).perform(click());
 
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.edit_text_distance_in_miles)).check(matches(withText("50")));
@@ -160,7 +160,7 @@ public class SettingsScreenTest {
 
     @Test
     public void cannotSaveWithMissingTime() {
-        onView(withContentDescription("Open navigation drawer")).perform(click());
+        onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.settings_menu_item)).perform(click());
 
         onView(withId(R.id.edit_text_distance_in_miles)).perform(replaceText(""));
