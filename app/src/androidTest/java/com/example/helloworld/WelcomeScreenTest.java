@@ -68,7 +68,7 @@ public class WelcomeScreenTest {
 
         onView(isRoot()).perform(HelpersViewMatcher.waitView(withText("Cool Guy Mike"), 10000));
 
-        onView(withRecyclerView(R.id.matchesTextView).atPosition(0))
+        onView(withRecyclerView(R.id.recycler_view).atPosition(0))
                 .check(matches(hasDescendant(withText("Cool Guy Mike"))));
     }
 }
