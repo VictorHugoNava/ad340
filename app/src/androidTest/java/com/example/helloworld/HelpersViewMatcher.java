@@ -64,7 +64,7 @@ public class HelpersViewMatcher {
         };
     }
 
-    public ViewAction setValue(Float value1, Float value2) {
+    public static ViewAction setValue(Float value1, Float value2) {
         return new ViewAction() {
             @Override
             public Matcher<View> getConstraints() {

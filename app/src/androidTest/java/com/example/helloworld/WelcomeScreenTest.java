@@ -12,8 +12,6 @@ import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentat
 import static com.example.helloworld.RecyclerViewMatcher.withRecyclerView;
 
 import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
 
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
@@ -56,15 +54,6 @@ public class WelcomeScreenTest {
     public void succesfulNavigationToMatches(){
         onView(withContentDescription(R.string.drawer_open)).perform(click());
         onView(withId(R.id.matches_menu_item)).perform(click());
-
-        double latitude = 47.6082d;
-        double longitude = -122.1890d;
-        activityTestRule.getScenario().onActivity(activity -> {
-            LocationUtils.startUpdates(activity,
-                    new Handler(Looper.getMainLooper()),
-                    latitude, longitude);
-        });
-
 
         onView(isRoot()).perform(HelpersViewMatcher.waitView(withText("Cool Guy Mike"), 10000));
 

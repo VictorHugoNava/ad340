@@ -42,6 +42,8 @@ public class SettingsScreenTest {
 
         onView(withId(R.id.radio_privacy)).perform(click());
 
+        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(20.0F, 70.0F));
+
         onView(withId(R.id.saveButton)).perform(click());
 
         onView(withContentDescription(R.string.drawer_open)).perform(click());
@@ -67,6 +69,8 @@ public class SettingsScreenTest {
         onView(withId(R.id.radio_she_her)).perform(click());
 
         onView(withId(R.id.radio_privacy)).perform(click());
+        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(25.0F, 35.0F));
+
 
         onView(withId(R.id.saveButton)).perform(click());
 
@@ -93,6 +97,8 @@ public class SettingsScreenTest {
         onView(withId(R.id.radio_they_them)).perform(click());
 
         onView(withId(R.id.radio_privacy)).perform(click());
+        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(25.0F, 35.0F));
+
 
         onView(withId(R.id.saveButton)).perform(click());
 
@@ -119,6 +125,8 @@ public class SettingsScreenTest {
         onView(withId(R.id.radio_no_answer)).perform(click());
 
         onView(withId(R.id.radio_privacy)).perform(click());
+        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(25.0F, 35.0F));
+
 
         onView(withId(R.id.saveButton)).perform(click());
 
@@ -147,6 +155,8 @@ public class SettingsScreenTest {
         onView(withId(R.id.radio_public)).perform(click());
 
         onView(withId(R.id.radio_privacy)).perform(click());
+        onView(withId(R.id.age_range_slider)).perform(HelpersViewMatcher.setValue(25.0F, 35.0F));
+
 
         onView(withId(R.id.saveButton)).perform(click());
 
