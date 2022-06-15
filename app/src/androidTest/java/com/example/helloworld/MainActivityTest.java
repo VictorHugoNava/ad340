@@ -68,13 +68,13 @@ public class MainActivityTest {
 
         onView(withId(R.id.submitButton)).perform(click());
 
+        onView(withId(R.id.name))
+                .check(matches(withText("Victor")));
+
         onView(withId(R.id.backButton)).perform(click());
 
-        onView(withId(R.id.nameField)).check(matches(withText("")));
-        onView(withId(R.id.userName)).check(matches(withText("")));
-        onView(withId(R.id.emailAddress)).check(matches(withText("")));
-        onView(withId(R.id.occupation)).check(matches(withText("")));
-        onView(withId(R.id.description)).check(matches(withText("")));
+        //onView(withId(R.id.nameField)).check(matches(withText("")));
+
     }
 
     @Test
